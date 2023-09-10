@@ -1,11 +1,14 @@
 import { ButtonsWrapper, Button} from "./FeedbackOptions.styled"
+import { nanoid } from "nanoid"
+
 
 export const FeedbackOptions = ({handleClick}) => {
+    const options = ['good', 'neutral', 'bad']
     return(
         <ButtonsWrapper>
-            <Button onClick = {() => handleClick("good")}>Good</Button>
-            <Button onClick = {() => handleClick("neutral")}>Neutral</Button>
-            <Button onClick = {() => handleClick("bad")}>Bad</Button>
+            {options.map(option => (
+                <Button key={nanoid()} onClick = {() => handleClick(option)}>{option}</Button>
+            ))}
         </ButtonsWrapper>
     )
 } 

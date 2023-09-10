@@ -1,7 +1,7 @@
+import { useEffect, useState } from "react";
+import { Section, NoFeedbackText } from "./Section.styled"
 import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions"
 import { Statistics } from "./Statistics/Statistics"
-import { Section, NoFeedbackText } from "./Section.styled"
-import { useEffect, useState } from "react";
 
 export function App () {
     const [good, setGood] = useState(0);
@@ -37,8 +37,7 @@ export function App () {
             setIsFeedbackGiven(true)  
         }
     }
-
-  
+    
     return(
             <>
             <Section>
